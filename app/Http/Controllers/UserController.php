@@ -13,4 +13,11 @@ class UserController extends Controller
         session()->put('locale', $locale);
         return redirect()->back();
     }
+
+    public function index()
+    {
+        $user = auth()->user();
+        $all_user = 
+        return view('auth.user', ['user' => $user]);
+    }
 }
